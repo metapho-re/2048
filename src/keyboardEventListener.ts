@@ -49,11 +49,13 @@ export const keyboardEventListener = (event: KeyboardEvent): void => {
   })();
 
   if (hasGridChanged) {
-    checkVictory(getGridSnapshot(gridElement));
+    setTimeout(() => {
+      checkVictory(getGridSnapshot(gridElement));
 
-    setRandomPosition();
-    refreshClasses();
+      setRandomPosition();
+      refreshClasses();
 
-    checkDefeat(getGridSnapshot(gridElement));
+      checkDefeat(getGridSnapshot(gridElement));
+    }, 150);
   }
 };

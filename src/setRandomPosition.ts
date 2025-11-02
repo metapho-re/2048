@@ -16,4 +16,10 @@ export const setRandomPosition = (): void => {
   ) as HTMLDivElement;
 
   elementAtRandomPosition.innerHTML = getRandomValue();
+
+  elementAtRandomPosition.classList.add("tile-created");
+
+  setTimeout(() => {
+    elementAtRandomPosition.classList.remove("tile-created");
+  }, 150);
 };

@@ -1,4 +1,4 @@
-const classes = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"];
+import { COLOR_CLASSES } from "./constants";
 
 export const getClass = (value: number): string =>
-  classes[Math.log2(value) - 1];
+  COLOR_CLASSES[Math.log2(value) - 1];

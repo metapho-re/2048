@@ -109,6 +109,7 @@ button:hover {
   border-radius: 8px;
   font-size: 2rem;
   font-weight: 800;
+  transition: all 150ms ease-in-out;
 }
 
 .a {
@@ -153,6 +154,47 @@ button:hover {
 
 .k {
   background-color: #e82424;
+}
+
+.tile-created {
+  animation: appear 150ms ease-in-out;
+}
+
+.tile-merged {
+  animation: merge 150ms ease-in-out;
+}
+
+.tile-moving {
+  z-index: 1;
+  transform: scale(0.85);
+  transition: transform 150ms ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes merge {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

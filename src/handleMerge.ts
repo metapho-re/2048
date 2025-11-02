@@ -13,6 +13,12 @@ const merge = (elementA: HTMLDivElement, elementB: HTMLDivElement): void => {
   elementB.innerHTML = "";
 
   setScore((currentScore) => currentScore + Number(elementA.innerHTML));
+
+  elementA.classList.add("tile-merged");
+
+  setTimeout(() => {
+    elementA.classList.remove("tile-merged");
+  }, 150);
 };
 
 export const handleMerge = (elements: HTMLDivElement[]): void => {
